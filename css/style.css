@@ -321,3 +321,12 @@ body {
   font-size: 12px;
   color: var(--text-dim);
 }
+
+@media (max-width: 860px) {
+  .content {
+    margin-left: 0 !important;
+  }
+  .section {
+    padding: 40px 24px !important;
+  }
+}
