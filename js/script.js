@@ -1,6 +1,8 @@
 const sections = document.querySelectorAll('.section');
 const navLinks = document.querySelectorAll('.nav-link');
 const particles = document.getElementById('particles');
+const menuToggle = document.getElementById('menuToggle');
+const sidebar = document.getElementById('sidebar');
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
@@ -25,3 +27,15 @@ const observer = new IntersectionObserver((entries) => {
 }, { root: document.querySelector('.content'), threshold: 0.5 });
 
 sections.forEach(s => observer.observe(s));
+
+menuToggle.addEventListener('click', () => {
+  menuToggle.classList.toggle('open');
+  sidebar.classList.toggle('open');
+});
+
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    menuToggle.classList.remove('open');
+    sidebar.classList.remove('open');
+  });
+});
