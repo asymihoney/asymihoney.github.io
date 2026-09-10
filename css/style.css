@@ -15,8 +15,6 @@
   --accent-churn: #8b6fd9;
 }
 
-html { scroll-behavior: smooth; }
-
 html, body {
   height: 100%;
   overflow: hidden;
@@ -122,6 +120,12 @@ body {
   height: 100vh;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
+  scrollbar-width: none;      
+  -ms-overflow-style: none;   
+}
+
+.content::-webkit-scrollbar {
+  display: none;          
 }
 
 .section {
@@ -141,7 +145,7 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.9);
+  background: rgba(0,0,0,0.8);
 }
 
 .section-inner {
