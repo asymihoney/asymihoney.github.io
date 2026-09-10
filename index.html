@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Asymi Honey — Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<canvas id="particles"></canvas>
+
+<nav class="sidebar" id="sidebar">
+  <div class="sidebar-top">
+    <p class="sidebar-eyebrow">portfolio</p>
+    <h1 class="sidebar-name">Asymi<br>Honey</h1>
+    <p class="sidebar-role">Data &amp; ML Systems</p>
+  </div>
+
+  <ul class="sidebar-nav">
+    <li><a href="#about" class="nav-link">About</a></li>
+    <li><a href="#experience" class="nav-link">Experience</a></li>
+    <li class="nav-divider">Projects</li>
+    <li><a href="#project-weather" class="nav-link">Weather Pipeline</a></li>
+    <li><a href="#project-aqiot" class="nav-link">AsmiAQIOT</a></li>
+    <li><a href="#project-ames" class="nav-link">Ames Housing</a></li>
+    <li><a href="#project-churn" class="nav-link">Telco Churn</a></li>
+  </ul>
+
+  <div class="sidebar-contact">
+    <a href="mailto:asymiht@gmail.com">asymiht@gmail.com</a>
+    <a href="https://github.com/asymihoney" target="_blank">github.com/asymihoney</a>
+    <a href="https://linkedin.com/in/asymi-honey" target="_blank">linkedin.com/in/asymi-honey</a>
+    <span class="sidebar-location">Depok, Indonesia</span>
+  </div>
+</nav>
+
+<main class="content">
+
+  <section id="about" class="section">
+    <div class="section-inner">
+      <p class="section-tag">01 — about</p>
+      <h2>Systems that turn raw signals into decisions.</h2>
+      <p class="lead">I'm an Information Systems graduate (S.Kom, Universitas Gunadarma, GPA 3.85) who builds the pipelines and models that sit between messy real-world data and the people who need to act on it.</p>
+      <div class="skill-groups">
+        <div class="skill-group">
+          <p class="skill-group-label">Languages</p>
+          <p class="skill-group-items">Python · SQL · JavaScript · C/C++ · HTML/CSS</p>
+        </div>
+        <div class="skill-group">
+          <p class="skill-group-label">Data Engineering</p>
+          <p class="skill-group-items">Airflow · cron · REST ingestion · PostgreSQL</p>
+        </div>
+        <div class="skill-group">
+          <p class="skill-group-label">Data &amp; ML</p>
+          <p class="skill-group-items">Pandas · Scikit-learn · XGBoost · model deployment</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" class="section">
+    <div class="section-inner">
+      <p class="section-tag">02 — experience</p>
+      <h2>UG LabSI<br>Laboratorium Sistem Informasi, Universitas Gunadarma</h2>
+      <ol class="timeline">
+        <li>
+          <p class="timeline-date">Mar 2026 — Aug 2026</p>
+          <p class="timeline-role">PJ Shift (Person in Charge)</p>
+          <p class="timeline-desc">Oversee lab operations during assigned shifts, coordinating scheduling and task delegation.</p>
+        </li>
+        <li>
+          <p class="timeline-date">Sep 2025 — Feb 2026</p>
+          <p class="timeline-role">Assistant Laboratory Leader</p>
+          <p class="timeline-desc">Supported lab sessions for Information Systems courses; maintained equipment and documentation.</p>
+        </li>
+        <li>
+          <p class="timeline-date">Mar 2025 — Aug 2025</p>
+          <p class="timeline-role">Laboratory Assistant</p>
+          <p class="timeline-desc">Active member of the Information Systems lab division.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="project-weather" class="section project-section" data-accent="weather"
+           data-bg="assets/images/weather-data-playground.jpg">
+    <div class="section-inner">
+      <p class="section-tag">03 — project</p>
+      <p class="project-stack">Python · Airflow / cron · PostgreSQL · REST API</p>
+      <h2>Weather Data Playground</h2>
+      <p class="lead">Automated end-to-end ETL pipeline ingesting real-time weather data from a public API on a schedule, transformed and stored in a structured PostgreSQL warehouse.</p>
+      <ul class="project-points">
+        <li>Designed and orchestrated the full pipeline: extraction, scheduling, reliability monitoring</li>
+        <li>Built transformation stages converting raw JSON into structured tables</li>
+      </ul>
+      <a href="https://github.com/asymihoney/Weather-Data-Playground" target="_blank" class="project-link">View repository</a>
+    </div>
+  </section>
+
+  <section id="project-aqiot" class="section project-section" data-accent="aqiot"
+           data-bg="assets/images/asmiaqiot.jpg">
+    <div class="section-inner">
+      <p class="section-tag">04 — project</p>
+      <p class="project-stack">C/C++ (Arduino) · ESP32 · MQTT · Supabase</p>
+      <h2>AsmiAQIOT</h2>
+      <p class="lead">Full sensor-to-cloud air quality monitoring system built as my bachelor's thesis.</p>
+      <ul class="project-points">
+        <li>Dual-storage architecture: MQTT-to-cloud with automatic local fallback during outages</li>
+        <li>Python MQTT-to-Supabase bridge handling the full sensor-to-dashboard flow</li>
+        <li>On-site alert system for real-time anomaly detection</li>
+      </ul>
+      <a href="https://github.com/asymihoney/AsmiAQIOT" target="_blank" class="project-link">View repository</a>
+    </div>
+  </section>
+
+  <section id="project-ames" class="section project-section" data-accent="ames"
+           data-bg="assets/images/ames-housing.jpg">
+    <div class="section-inner">
+      <p class="section-tag">05 — project</p>
+      <p class="project-stack">Python · XGBoost · Scikit-learn · Streamlit</p>
+      <h2>Ames Housing Price Prediction</h2>
+      <p class="lead">End-to-end house price prediction benchmarking Linear Regression, Random Forest, and XGBoost.</p>
+      <ul class="project-points">
+        <li>Benchmarked models across 80+ features — best R² = 0.93 with XGBoost</li>
+        <li>Deployed as an interactive Streamlit app for real-time inference</li>
+      </ul>
+      <a href="https://github.com/asymihoney/XGBoost-Ames-Housing-Prediction" target="_blank" class="project-link">View repository</a>
+    </div>
+  </section>
+
+  <section id="project-churn" class="section project-section" data-accent="churn"
+           data-bg="assets/images/telco-churn.jpg">
+    <div class="section-inner">
+      <p class="section-tag">06 — project</p>
+      <p class="project-stack">Python · XGBoost · Streamlit</p>
+      <h2>Telco Customer Churn Prediction</h2>
+      <p class="lead">Classification app scoring telecom customers for churn risk in real time, built for non-technical stakeholders.</p>
+      <ul class="project-points">
+        <li>Built and tuned classification models on ~7,000 records — 0.85 F1-score</li>
+        <li>Schema-driven one-hot encoding for real-time input mapping</li>
+      </ul>
+      <a href="https://github.com/asymihoney/XGBoost-Telco-Customer-Churn-Prediction" target="_blank" class="project-link">View repository</a>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <p>Built by Asymi Honey — 2026</p>
+  </footer>
+
+</main>
+
+<script src="js/particles.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
