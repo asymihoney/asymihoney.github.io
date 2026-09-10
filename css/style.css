@@ -114,10 +114,15 @@ body {
 /* Content */
 .content {
   margin-left: 280px;
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
 }
 
 .section {
   min-height: 100vh;
+  scroll-snap-align: start;
+  scroll-snap-stop: always; 
   display: flex;
   align-items: center;
   padding: 60px 80px;
@@ -130,7 +135,7 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.7); /* ~30% image visibility */
+  background: rgba(0,0,0,0.7);
 }
 
 .section-inner {
@@ -257,12 +262,4 @@ body {
   padding: 40px 80px;
   font-size: 12px;
   color: var(--text-dim);
-}
-
-/* Mobile */
-@media (max-width: 860px) {
-  .sidebar { display: none; } /* replaced by menu-toggle version if you want mobile nav */
-  .content { margin-left: 0; }
-  .section { padding: 40px 24px; }
-  .section h2 { font-size: 28px; }
 }

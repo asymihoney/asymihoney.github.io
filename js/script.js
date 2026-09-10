@@ -22,6 +22,6 @@ const observer = new IntersectionObserver((entries) => {
       }
     }
   });
-}, { threshold: 0.5 });
+}, { root: document.querySelector('.content'), threshold: 0.5 });
 
 sections.forEach(s => observer.observe(s));
