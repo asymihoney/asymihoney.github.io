@@ -17,6 +17,11 @@
 
 html { scroll-behavior: smooth; }
 
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
 body {
   font-family: var(--sans);
   color: var(--text);
@@ -120,15 +125,16 @@ body {
 }
 
 .section {
-  min-height: 100vh;
+  height: 100vh; 
   scroll-snap-align: start;
-  scroll-snap-stop: always; 
+  scroll-snap-stop: always;
   display: flex;
   align-items: center;
   padding: 60px 80px;
   position: relative;
   background-size: cover;
   background-position: center;
+  overflow: hidden; 
 }
 
 .project-section::before {
